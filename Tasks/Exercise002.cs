@@ -11,7 +11,6 @@ namespace TechReturners.Tasks
         public static int Past(int h, int m, int s)
         {
 
-
             int total = (h * 3600000) + (m * 60000) + (s * 1000);
             return total;
 
