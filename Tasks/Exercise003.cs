@@ -29,6 +29,28 @@ namespace TechReturners.Tasks
     {
         public static int[] RowWeights(int[] a)
         {
+            //Variable count for to verified the position of the weight on the list
+            int count = 0;
+            //Variables to sum the weights for each team
+            int team1 = 0;
+            int team2 = 0;
+
+            //A Loop for check each item
+            foreach (int item in a)
+            {
+                //This is verified if the position is even or odd, if is even sum to team1, if isnt, sum to team2
+                if (count % 2 == 0)
+                {
+                    team1 = team1 + item;
+                }
+                else
+                {
+                    team2 = team2 + item;
+                }
+                count++;
+            }
+
+            return new int[] {team1,team2};
             throw new NotImplementedException();
         }
     }
