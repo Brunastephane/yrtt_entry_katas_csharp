@@ -27,6 +27,32 @@ namespace TechReturners.Tasks
     {
         public static List<string> Wave(string str)
         {
+            //variable for return the wave
+            List<string> wave = new List<string>();
+            //variable for check Loop position
+            int count = 0;
+
+            //A Loop for each letter on the word
+            foreach (char c in str)
+            {
+                //check if is no space, if it has, ignore and go to the next one
+                if(char.IsWhiteSpace(c) == false)
+                {
+                    //convert the string to array, to make easy identify the position of each char
+                    char[] w = str.ToCharArray();
+
+                    //Assigning the upper case char version on the position
+                    w[count] = char.ToUpper(c);
+
+                    //Convertin the array into string and add on the list
+                    wave.Add(new string(w));
+                }
+                //Go to next char
+                count++;
+            }
+
+            return wave;
+
             throw new NotImplementedException();
         }
     }
